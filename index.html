@@ -15,15 +15,54 @@
 
     <div class="rightPanel">
       <p class="quote">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam explicabo
-        est, provident labore expedita reiciendis sequi repellendus consequatur,
-        esse culpa eaque ducimus blanditiis eveniet voluptatum natus earum unde
-        dolore fuga.
+        Sequoia National Park is a breathtaking natural wonder, home to towering
+        ancient sequoia trees. With its majestic mountain landscapes, scenic
+        hiking trails, and tranquil meadows, the park offers an unforgettable
+        escape into nature.
       </p>
-      <form action="my-landing-page.com" method="post">
-        <input type="text" id="firstName" name="firstName" />
-      </form>
-      <div class="login-section"></div>
+
+      <div class="midSection">
+        <h2>Sign up for updates on Sequoia!</h2>
+        <form action="my-landing-page.com" method="post" id="signup-form">
+          <div class="inputBox">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div class="inputBox">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+          <div class="inputBox">
+            <label for="email">Email</label
+            ><input type="email" id="emai" name="email" />
+          </div>
+          <div class="inputBox">
+            <label for="Phone Number">Phone Number</label
+            ><input type="number" id="number" name="number" />
+          </div>
+          <div class="inputBox">
+            <label for="password">Password</label
+            ><input type="password" id="password" name="password" />
+          </div>
+          <div class="inputBox">
+            <label for="passwordConfirm  ">Confirm Password</label
+            ><input
+              type="password"
+              id="passwordConfirm"
+              name="passwordConfirm"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="login-section">
+        <button type="submit" form="signup-form" id="accButton">
+          Create Account
+        </button>
+        <p>
+          Already have an account?
+          <span><a href="https://www.google.com">Log in</a> </span>
+        </p>
+      </div>
     </div>
   </body>
 </html>
