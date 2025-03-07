@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(93, 163, 131);
+  display: flex;
+  /* gap: 5%; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leftPanel {
+  background-image: url(/images/sequoia.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 100vh;
+
+  filter: contrast(1.05) saturate(1.2) brightness(0.95);
+
+  /* position: relative;
+  display: flex;
+  justify-content: center; */
+}
+
+/* Overlay dark */
+.leftPanel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(174, 160, 57, 0.6); */
+  /* background-color: rgba(62, 205, 134, 0.6); */
+
+  z-index: 1;
+
+  /* left: 50%; */
+  top: 25%;
+  transform: translate(-50%, -25%);
+}
+
+.leftPanel::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(62, 205, 134, 0.6); */
+  z-index: 1;
+
+  left: 50%;
+  top: 25%;
+  transform: translate(0, -25%);
+}
+
+.logo {
+  position: absolute;
+  width: min(50%, 200px);
+  height: auto;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+  z-index: 2;
+
+  /* filter: brightness(2); */
+}
+
+.rightPanel {
+  width: 60%;
+  padding: 5%;
+}
+
+@media (1200px> width > 1095px) {
+  .leftPanel {
+    background-position: center -100px;
+  }
+}
+
+@media (width>1200px) {
+  .leftPanel {
+    background-position: center -150px;
+  }
+}
+
+p {
+  font-size: clamp (0.8rem, 2vh, 2rem);
+  /* font-size: 2rem; */
+  line-height: calc(1rem + 1vh);
+}
