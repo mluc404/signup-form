@@ -28,7 +28,6 @@ phoneInput.addEventListener("keydown", (e) => {
 });
 
 // Show red border on invalid inputs
-
 let inputs = document.querySelectorAll("input[required]");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
@@ -47,7 +46,7 @@ accButton.addEventListener("click", (e) => {
   });
 
   // check email format
-  if (!email.value.includes("@")) {
+  if (!email.value.includes("@") || !email.value.includes(".")) {
     email.style.border = "red solid 2px";
     isValid = false;
   } else {
@@ -55,7 +54,11 @@ accButton.addEventListener("click", (e) => {
   }
 
   // check password match
-  if (password.value !== passwordConfirm.value) {
+  if (
+    !password.value.trim() ||
+    !passwordConfirm.value.trim() ||
+    password.value !== passwordConfirm.value
+  ) {
     password.style.border = "red solid 2px";
     passwordConfirm.style.border = "red solid 2px";
     isValid = false;
@@ -63,8 +66,6 @@ accButton.addEventListener("click", (e) => {
     password.style.border = "rgba(115, 156, 142) solid 2px";
     passwordConfirm.style.border = "rgba(115, 156, 142) solid 2px";
   }
-  console.log(password.value);
-  console.log(passwordConfirm.value);
 
   if (!isValid) {
     e.preventDefault();
