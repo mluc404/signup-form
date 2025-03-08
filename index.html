@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup Form</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="leftPanel">
@@ -26,27 +26,34 @@
         <form action="my-landing-page.com" method="post" id="signup-form">
           <div class="inputBox">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" />
+            <input required type="text" id="firstName" name="firstName" />
           </div>
           <div class="inputBox">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" />
+            <input required type="text" id="lastName" name="lastName" />
           </div>
           <div class="inputBox">
             <label for="email">Email</label
-            ><input type="email" id="emai" name="email" />
+            ><input required type="email" id="emai" name="email" />
           </div>
           <div class="inputBox">
-            <label for="Phone Number">Phone Number</label
-            ><input type="number" id="number" name="number" />
+            <label for="phoneNumber">Phone Number</label
+            ><input
+              required
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              inputmode="numeric"
+            />
           </div>
           <div class="inputBox">
             <label for="password">Password</label
-            ><input type="password" id="password" name="password" />
+            ><input required type="password" id="password" name="password" />
           </div>
           <div class="inputBox">
             <label for="passwordConfirm  ">Confirm Password</label
             ><input
+              required
               type="password"
               id="passwordConfirm"
               name="passwordConfirm"
