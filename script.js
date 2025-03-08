@@ -71,3 +71,17 @@ accButton.addEventListener("click", (e) => {
     e.preventDefault();
   }
 });
+
+// Match left side dark overlay height with right side mid section
+
+function matchHeight() {
+  let midSection = document.querySelector(".midSection");
+  let leftPanel = document.querySelector(".leftPanel");
+
+  if (midSection && leftPanel) {
+    let sameHeight = midSection.offsetHeight + "px";
+    leftPanel.style.setProperty("--match-height", sameHeight);
+  }
+}
+window.addEventListener("load", matchHeight);
+window.addEventListener("rezie", matchHeight);
